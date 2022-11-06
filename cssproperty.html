@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+
+  }
+
+body {
+  background-color: rgb(215, 193, 193);
+  border-radius: 50px;
+}
+
+h1{
+    color: blue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: xx-large;
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+p{
+    color:black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+
+}
+h2{
+    color: #73AD21;
+}
+
+/* Style the header */
+.header {
+  background-color: palevioletred;
+  padding: 20px;
+  text-align: center;
+  border-radius: 50px;
+  border: dotted;
+  color:maroon;
+  box-shadow: 0 0 1px 2px;
+}
+div.static {
+  position: static;
+  border: 3px solid black;
+  border: double;
+  border-radius: 50px;
+  box-shadow: 0 0 3px 3px;
+
+  color: yellow;
+  
+}
+marquee{
+      font-size: 30px;
+      color: #8ebf42;
+      font-family: sans-serif;
+    }
+   
+
+    div.sticky {
+      position: -webkit-sticky;
+      position: sticky;
+      border-radius: 10px;
+      
+      padding: 40px;
+      font-size: 20px;
+      background-color: black;
+     color: #771477;
+       box-shadow: 0 0 20px 10px;
+    }
+      
+
+/* Style the topnav links */
+.topnav a {
+
+  float: left;
+  
+  color: azure;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  padding: 14px 16px; 
+  word-spacing: 33px;
+  text-decoration: underline;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color:red;
+  
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  margin: auto;
+  float: right;
+  width: 33.33%;
+  padding: 35px;
+  border: dashed;
+   box-shadow: 0 0 1px 2px; 
+  color:midnightblue;
+  border-radius: 50px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:800px) {
+  .column {
+    width: 100%;
+    background-color: #73AD21;
+  }
+}
+
+div.relative1{
+
+    position: relative;
+    width:1660px ;
+    border:3px solid orangered;
+    border-radius: 30px;
+    border:dotted;
+    box-shadow: 0 0 5px 6px;
+    color: white;
+    
+}
+  
+
+
+div.relative {
+    margin-left: auto;
+    margin-right: auto;
+  position: relative;
+  width: 1500px;
+  height: 350px;
+  border: 3px solid rgb(159, 28, 159); 
+  border-radius: 40px;
+  border: double;
+  box-shadow: 0 0 7px 5px;
+  color: white;
+  animation: mymove 2s infinite;
+  animation-delay: 2s;
+}
+
+/*@keyframes mymove {
+  from {left: 0px;}
+  to {left: 200px;
+  color: black;}
+  
+}*/
+@keyframes mymove {
+  from {background-color:pink;
+  }
+  to {background-color:orange;
+}
+}
+
+
+
+div.absolute {
+    margin-right: 500px;
+    margin-top: 300px;
+  position: absolute;
+  top: 1280px;
+  right: 0;
+  width: 400px;
+  height: 120px;
+  border: 3px solid #64833a;
+  border-radius: 10px;
+  border: dashed;
+  box-shadow: 0 0 5px 4px;
+  color: black;
+  animation: mymove 2s infinite;
+
+}
+@keyframes mymove {
+  from {background-color: cyan;
+  }
+  to {background-color: purple;
+}
+}
+
+div.fixed {
+    margin-right: 50px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  border: 5px solid red;
+  box-shadow: 0 0 5px 10px;
+  color: midnightblue
+}
+img{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-top: auto;
+    border-radius: 40%;
+    box-shadow: 0 0 5px 10px;
+    color: mediumvioletred;
+}
+img:hover {
+         
+         /* IE 9 */
+         -ms-transform: rotate(20deg);
+          
+         /* Safari */
+         -webkit-transform: rotate(20deg);
+          
+         /* Standard syntax */
+         transform: rotate(20deg);
+     }
+
+    /*img:hover {
+        /* IE 9 */
+       /* -ms-transform: scale(1, 2);
+        /* Safari */
+        /*-webkit-transform: scale(1, 1);
+        /* Standard syntax */
+       /* transform: scale(1, 2);
+    }*/
+
+   /** img:hover {
+         
+         /* IE 9 */
+         /*-ms-transform: matrix(1, -0.3, 0, 1, 0, 0);
+          
+         /* Safari */
+        /* -webkit-transform: matrix(1, -0.3, 0, 1, 0, 0);
+          
+         /* Standard syntax */
+        /* transform: matrix(1, -0.3, 0, 1, 0, 0);
+     }**/
+     
+
+</style>
+
+
+</head>
+<body>
+  
+<div class="static">
+   <div class="header">
+  <marquee behavior="alternate" height="50" scroll amount="20"><h1>NATIONAL PARK IN THE WORLD</h1></marquee>
+ 
+  <p>Resize the browser window to see the responsive effect.</p>
+   </div>
+</div>
+
+<div class="sticky">
+  <div class="topnav">
+    <a href="#">HOME</a>
+    <a href="#">CONTACT</a>
+    <a href="#">VIDEOS</a>
+    <a href="#">ABOUT</a>
+    <a href="#">PAGES</a>
+    <a href="#">FEATURES</a>
+    <a href="#">BLOG</a>
+    <a href="#">GALLARY</a>
+    <a href="#">HELP</a>
+    <a href="#">MORE INFO</a>
+  </div>
+  
+</div>
+
+
+<div class="row">
+  <div class="column">
+    <img src="Top-10-National-Parks-in-the-World-Jim-Corbett-National-Park.jpg" width="100%">
+    <h2>Great Barrier Reef National Park (Australia)</h2>
+    <p>Considered one of the 7 Natural Wonders of the World, the planet’s largest coral reef system is also one of its most endangered. This is in large part due to accelerated coral bleaching caused by global warming, and an increase of tourists eager to see it while it’s still relatively healthy.
+
+        The Great Barrier Reef is actually composed of over 2,900 individual reefs and 900 islands stretched out across an area of around 133,000 square miles. Located in the Coral Sea off the coast of Queensland, it’s home to 30 species of cetaceans, over 1,500 species of fish, six species of sea turtles, and around 125 species of sharks and stingrays.
+        
+        The UNESCO World Heritage Site also includes mangroves and salt marshes on the coast, which provide fertile breeding grounds for saltwater crocodiles and frogs. Its islands serve as temporary or permanent homes to around.</div>
+  
+  <div class="column">
+    <img src="Guanaco_Patagonia-1024x702.jpg" width="100%">
+    <h2>Tarangire National Park (Tanzania)</h2>
+    <p>Though it’s not nearly as well-known as Serengeti National Park or the Ngorongoro Crater, Tarangire won our hearts thanks to the impressive array of wildlife we saw during our short visit.
+
+        The sixth largest park in Tanzania at 1,100 square miles, its key draw for animals is the Tarangire River, which becomes the area’s only source of water during the dry season. This may explain why the area has become a huge draw for Elephants, which we saw by the dozens during our 2015 visit.
+        
+        The park has a number of other unique features, including massive Baobab trees, massive termite mounds that often serve as home to dark mongooses, and the famous tree-climbing lions. It’s also a major draw for bird-watchers, as the swamps on Tarangire attract one of the world’s most stunning arrays of breeding birds (over 550 species).
+        Top 10 National Parks in the World- Tikal National Park</div>
+  
+  <div class="column">
+    <img src="Top-10-National-Parks-in-the-World-Manu-National-Park-1024x685.jpg" width="100%">
+    <h2>Manú National Park (Peru)</h2>
+    <p>Located just 3 hours from Cusco, this 11,800-square mile park located just 3 hours from Cusco is rapidly emerging as a world-renowned hotspot for birdwatchers.
+
+        The biosphere reserve, which was named a UNESCO World Heritage Site in 1987, contains over 1000 different species of birds (from Andean Cock-of-the-Rock and Hoatzin to Macaws and Spix’s Guan)– more than the United States and Canada combined!
+        
+        But Manú National Park’s remarkable biodiversity doesn’t end there: With ecosystems ranging from tropical rainforests to montane grasslands at elevations of nearly 14,000 feet, it’s also home to exotic wildlife such as Jaguars, Pumas, Giant
+         Otters, Brazilian Tapir, Capybaras, Spectacled Bears, two species of sloths, and 14 species of monkeys.
+         remarkable biodiversity doesn’t end there: With ecosystems ranging from tropical rainforests to montane grasslands at
+         elevations of nearly 14,000 feet, it’s also home.
+        </div>
+        
+      
+       <div class="relative1">
+         
+             
+        <marquee behavior="altenate"> <h1 style="text-align:center;">Best National Parks in the World
+
+        </h1>
+     </marquee>
+
+            With so much beauty to behold across the globe, it's tough to choose which natural wonders you should visit first. To help, U.S. News compiled a ranking of the best national parks in the world using reader votes and expert insights, as well as factors like accessibility, abundance of wildlife, camping opportunities and breathtaking natural landmarks. We need your input to help determine next year's ranking, so vote for your favorite destinations below. (Note: Some of the below destinations may be affected by the coronavirus outbreak. Check with the CDC and the U.S. Department of State before traveling.)
+                
+              </div>
+                
+<div class="relative">
+    <img src="Top-10-National-Parks-in-the-World-Jim-Corbett-National-Park.jpg" width="33%">
+    <img src="Tarangire-Elephants.jpg" width="33%">
+    <img src="Top-10-National-Parks-in-the-World-Manu-National-Park-1024x685.jpg" width="33%">
+    
+</div>
+  <div class="absolute">
+    <h3>About us</h3>TourScanner is the world’s largest website to search for tours & travel activities.
+     Search for free among 1,500,000 tours in every destination around the world!</div>
+</div>
+
+<h2>Explore more</h2>
+
+<p> Copyright 2022 NPR. To see more, visit https://www.npr.org. </p>
+<div class="fixed">
+National park Website
+</div>
+
+
+
+
+
+</body>
+</html>
+
+
